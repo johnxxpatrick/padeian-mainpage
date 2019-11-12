@@ -521,11 +521,14 @@ $(document).ready(function ($) {
             dots: true,
             infinite: true,
             autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
             autoplaySpeed: 2000,
+            focusOnSelect: true,
             centerPadding: '60px',
             prevArrow: "<div class='slick-custom is-prev'><i class='fa fa-chevron-left'></i></div>",
             nextArrow: "<div class='slick-custom is-next'><i class='fa fa-chevron-right'></i></div>",
-            slidesToShow: 3,
             responsive: [
                 {
                     breakpoint: 768,
@@ -583,37 +586,130 @@ $(document).ready(function ($) {
         });
     }
 
+    $('.multiple-image-carousel').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        infinite: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: "<div class='slick-custom is-prev'><i class='fa fa-chevron-left'></i></div>",
+        nextArrow: "<div class='slick-custom is-next'><i class='fa fa-chevron-right'></i></div>",
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+    
     //Multiple images slick carousel
-    if ($('.multiple-image-carousel').length) {
-        $('.multiple-image-carousel').slick({
-            infinite: true,
-            dots: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            prevArrow: "<div class='slick-custom is-prev'><i class='fa fa-chevron-left'></i></div>",
-            nextArrow: "<div class='slick-custom is-next'><i class='fa fa-chevron-right'></i></div>",
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    }
+    // if ($('.multiple-image-carousel').length) {
+    //     $('.multiple-image-carousel').slick({
+    //         infinite: true,
+    //         dots: true,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //         autoplay: true,
+    //         autoplaySpeed: 2000,
+    //         prevArrow: "<div class='slick-custom is-prev'><i class='fa fa-chevron-left'></i></div>",
+    //         nextArrow: "<div class='slick-custom is-next'><i class='fa fa-chevron-right'></i></div>",
+    //         responsive: [
+    //             {
+    //                 breakpoint: 768,
+    //                 settings: {
+    //                     arrows: false,
+    //                     centerMode: true,
+    //                     centerPadding: '40px',
+    //                     slidesToShow: 3
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 480,
+    //                 settings: {
+    //                     arrows: false,
+    //                     centerMode: true,
+    //                     centerPadding: '40px',
+    //                     slidesToShow: 1
+    //                 }
+    //             }
+    //         ]
+    //     });
+    // }
+
+    $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
 
     //Video embed init
     if ($('#video-embed').length) {
@@ -799,4 +895,6 @@ $(document).ready(function ($) {
       
         revealOnScroll();
       });
+
+   
 })

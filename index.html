@@ -7,7 +7,11 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title> Padeian - School Management System</title>
       <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
+      <link rel="stylesheet" href="path/to/framework7.min.css">
       <!--Core CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+      <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
       <link rel="stylesheet" href="assets/css/bulma.css">
       <link rel="stylesheet" href="assets/css/app.css">
       <link rel="stylesheet" href="assets/css/core.css">
@@ -15,30 +19,14 @@
    <body>
       <div class="pageloader"></div>
       <div class="infraloader is-active"></div>
-      
-      <!-- Hero (Parallax) and nav -->
       <div class="hero product-hero parallax is-cover is-relative is-default is-bold" data-background="https://via.placeholder.com/1920x1080" data-color="#000" data-color-opacity="0.0" data-position-x="center" data-demo-background="assets/images/startup/header.png">
          <nav class="navbar navbar-wrapper navbar-fade navbar-light is-transparent">
             <div class="container">
-               <!-- Brand -->
                <div class="navbar-brand">
                   <a class="navbar-item" href="https://padeian.com/">
                   <img class="light-logo" src="assets/images/logos/logo-white.png" alt="">
                   <img class="dark-logo" src="assets/images/logos/logo-dark.png" alt="">
                   </a>
-                  <!-- Sidebar Trigger -->
-                  <!--<a  id="navigation-trigger" class="navbar-item hamburger-btn" href="javascript:void(0);">
-                     <span class="menu-toggle">	
-                         <span class="icon-box-toggle"> 	
-                             <span class="rotate">
-                                 <i class="icon-line-top"></i>
-                                 <i class="icon-line-center"></i>
-                                 <i class="icon-line-bottom"></i> 
-                             </span>
-                         </span>
-                     </span>
-                     </a>-->
-                  <!-- Responsive toggle -->
                   <div class="custom-burger" data-target="">
                      <a id="" class="responsive-btn" href="javascript:void(0);">
                      <span class="menu-toggle">	
@@ -52,32 +40,15 @@
                      </span>
                      </a>
                   </div>
-                  <!-- /Responsive toggle -->
                </div>
-               <!-- Navbar menu -->
                <div class="navbar-menu">
-                  <!-- Navbar Start -->
                   <div class="navbar-start">
-                     <!-- Navbar item -->
-                     <a class="navbar-item is-slide" href="#">
-                     Home
-                     </a>
-                     <!-- Navbar item -->
-                     <a class="navbar-item is-slide" href="#features">
-                     Features
-                     </a>
-                     <!-- Navbar item -->
-                     <a class="navbar-item is-slide" href="#benefits">
-                     Benefits
-                     </a>
-                     <!-- Navbar item -->
-                     <a class="navbar-item is-slide" href="#how-it-works">
-                     How it works
-                     </a>
+                     <a class="navbar-item is-slide" href="#">Home</a>
+                     <a class="navbar-item is-slide" href="#features">Features</a>
+                     <a class="navbar-item is-slide" href="#benefits">Benefits</a>
+                     <a class="navbar-item is-slide" href="#how-it-works">How it works</a>
                   </div>
-                  <!-- Navbar end -->
                   <div class="navbar-end">
-                     <!-- Signup button -->
                      <div class="navbar-item">
                         <a id="#signup-btn" href="padeian-signup.html" class="button button-signup btn-outlined is-bold btn-align light-btn rounded raised">
                         Sign up
@@ -87,7 +58,8 @@
                </div>
             </div>
          </nav>
-         <!-- Hero image -->
+
+         <!-- Hero and nav -->
          <div id="main-hero" class="hero-body">
             <div class="container has-text-centered">
                <div class="columns is-vcentered pt-80 pb-80">
@@ -99,27 +71,17 @@
                         Take control over your institution by using an all-in-one School Management System.  
                      </h2>
                      <br>
-                     <div class="columns pt-50">
+                     <div class="columns pt-50 dl-btn">
                         <div class="button-wrap">
                            <a href="#" data-toggle="modal" data-target="" id="learn-more" class="button button-cta light-btn btn-outlined rounded is-bold is-title-reveal">Learn More</a>
                         </div>
+                        <!-- <a id="myButton" href="#">Download JSON</button> -->
                         <div class="button-wrap">
-                           <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta light-btn btn-outlined-v2 rounded is-bold is-title-reveal">Download</a>
+                           <a href="assets/images/startup/home/laptop.png" class="button button-cta light-btn btn-outlined-v2 rounded is-bold is-title-reveal" download="laptop.png" target="_blank">Download</a>
                         </div>
                      </div>
-                     <!-- Signup form -->
-                     <!--<div class="signup-block">
-                        <form>
-                            <div class="control">
-                                <input type="email" class="input" placeholder="Your email address">
-                                <button type="submit" class="button btn-align secondary-btn raised">Sign up</button>
-                            </div>
-                        </form>
-                        </div>-->
-                     <!-- /Signup form -->
                   </div>
                   <div class="column">
-                     <!-- Hero mockup -->
                      <figure class="image is-hidden-mobile">
                         <img class="image-shadow" src="assets/images/startup/home/laptop.png" alt="" style="height: 400px;">
                         <div class="div-laptop">
@@ -131,31 +93,19 @@
                         <div class="mobile-logo is-icon-reveal">
                            <img class="dark-logo" src="assets/images/logos/logo-dark.png" alt="" class="logo">
                         </div>
-                        <!-- <div class="button-wrap-play">
-                           <a href="#" data-toggle="modal" data-target="modal-play-video" id="link-play-video" class="button button-cta light-btn btn-outlined-play rounded is-bold is-title-reveal modal-button"><span class="material-icons">play_circle_outline</span></a>
-                           </div> -->
                      </figure>
-                     <!-- /Hero mockup -->
                   </div>
                </div>
-               <!-- <button class="button is-primary is-large modal-button" data-target="modal-play-video" aria-haspopup="true">Launch card modal</button> -->
-               <!-- <div class="btnSearch-Container">
-                  <div class="btn" >
-                      <span class="material-icons">play_circle_outline</span>Play Video
-                      <div class="dot"></div>
-                  </div>
-                  </div> -->
-               <section id="scroll-down" class="demo">
+               <section id="scroll-down" class="demo arrow-down">
                   <a href="#what-we-do"><span></span></a>
                </section>
             </div>
          </div>
-         <!-- /Hero image -->
       </div>
       <!-- /Hero and nav -->
 
       <!-- Modal Play Video -->
-      <div id="modal-play-video" class="modal">
+      <!-- <div id="modal-play-video" class="modal">
          <div class="modal-background"></div>
          <div class="modal-card">
             <header class="modal-card-head">
@@ -164,60 +114,35 @@
             </header>
             <section class="modal-card-body">
                <div class="modal-body">
-                  <video src="https://kontainer.com/content//2019/02/Kontainer-video_ENG.mp4" width="1280" height="720" playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="js-hero-video" data-v-9da594b4></video>
+                  <video src="assets/videos/padeian-video.mp4" width="1280" height="720" playsinline="" muted="muted" loop="loop" autoplay="autoplay" class="js-hero-video" data-v-9da594b4></video>
                </div>
             </section>
          </div>
-      </div>
+      </div> -->
       <!-- /Modal Play Video -->
-
-      <!-- Clients -->
-      <!--<div class="hero-foot">
-         <div class="container">
-             <div class="tabs partner-tabs is-centered">
-                 <ul>
-                     <li><a><img class="partner-logo" src="assets/images/logos/custom/covenant.svg" alt=""></a></li>
-                     <li><a><img class="partner-logo" src="assets/images/logos/custom/infinite.svg" alt=""></a></li>
-                     <li><a><img class="partner-logo" src="assets/images/logos/custom/phasekit.svg" alt=""></a></li>
-                     <li><a><img class="partner-logo" src="assets/images/logos/custom/grubspot.svg" alt=""></a></li>
-                     <li><a><img class="partner-logo" src="assets/images/logos/custom/gutwork.svg" alt=""></a></li>
-                 </ul>
-             </div>
-         </div>
-         </div> -->
-      <!-- /Clients -->
-
+     
       <!-- What we do Services -->
       <section id="what-we-do" class="section is-small">
          <div class="container">
-            <!-- Title -->
             <div class="section-title-wrapper" data-aos="fade-in" data-aos-easing="linear">
-               <!--<div class="bg-number">?</div>-->
                <h2 class="title section-title has-text-centered dark-text"> What we do</h2>
-               <div class="subtitle has-text-centered is-tablet-padded">
-                  Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu.
+               <!-- <div class="subtitle has-text-centered is-tablet-padded">
+                  Padeian is a subscription-based school management platform for global education industry. It provides seamless, secure, affordable & easy-to-use end-to-end solution or managing day-to-day school operations. It also Integrates Social eLearning that empowers users to communicate and collaborate in real-time.
+               </div> -->
+            </div>
+
+            <div class="content-wrapper" data-aos="zoom-in">
+               <div class="columns is-vcentered">
+                  <div class="subtitle has-text-centered is-tablet-padded">
+                     Padeian is a subscription-based school management platform for global education industry. It provides seamless, secure, affordable & easy-to-use end-to-end solution or managing day-to-day school operations. It also Integrates Social eLearning that empowers users to communicate and collaborate in real-time.
+                  </div>
                </div>
             </div>
-            <!-- <div class="container-v2"> 
-               <div class="image-container-v2">
-               <img src="https://jesperekstrom.com/wp-content/uploads/2018/11/Wordpress-folder-purple.png" alt="wordpress-folder-icon">
-               </div>
-               
-               <div class="text-container-v2">
-                 <h1>Animation</h1>
-                 <div class="fading-effect-v2"></div>
-               </div>
-               
-               </div> -->
-            <div class="columns integration-cards is-minimal is-vcentered is-gapless is-multiline">
-               <!-- Card -->
+
+            <!-- <div class="columns integration-cards is-minimal is-vcentered is-gapless is-multiline">
                <div class="column" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                  <!-- <div class="card-border btn-1"></div> -->
-                  <!-- class="icon-transition" -->
                   <div class="feature-card card-md hover-inset has-text-centered">
                      <div>
-                        <!-- class="brand-logo">-->
-                        <!-- <div class="droplet"></div> -->
                         <img src="assets/images/startup/home/grad-cap.png" style="height: 120px;" alt="">
                      </div>
                      <div class="card-title">
@@ -231,7 +156,6 @@
                <div class="column" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                   <div class="feature-card card-md hover-inset has-text-centered">
                      <div>
-                        <!-- class="brand-logo">-->
                         <img src="assets/images/startup/home/shield1.png" style="height: 120px;" alt="">
                      </div>
                      <div class="card-title">
@@ -255,7 +179,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
          </div>
       </section>
       <!-- /What we do Services -->
@@ -263,23 +187,15 @@
       <!-- Features section -->
       <section id="features" class="section is-small is-grey">
          <div class="container">
-            <!-- Title -->
             <div class="section-title-wrapper" data-aos="fade-in" data-aos-easing="linear">
-               <!--<div class="bg-number">2</div>-->
                <h2 class="title section-title has-text-centered dark-text"> Features</h2>
-               <div class="subtitle has-text-centered is-tablet-padded">
-                  Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.                   
-               </div>
             </div>
             <div class="content-wrapper">
-               <!-- UI block -->
                <div class="columns is-vcentered">
-                  <!-- Content -->
                   <div class="column image-shadow" data-aos="fade-right">
                      <img src="assets/images/startup/features/simple-easy-enrollment.png" alt="">
                   </div>
                   <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
                      <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
                         Paperless Admission & Enrollment Processes
                      </h2>
@@ -287,16 +203,11 @@
                         No more long queues. Students can now enroll online anytime, anywhere.
                      </div>
                   </div>
-                  <!-- Large UI -->
                </div>
-               <!-- /UI block -->
             </div>
             <div class="content-wrapper">
-               <!-- UI block -->
                <div class="columns is-vcentered">
-                  <!-- Content -->
                   <div class="column" data-aos="fade-right">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
                      <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
                         All-in-one Simplified School Management Software
                      </h2>
@@ -304,22 +215,17 @@
                         Provide seamless, secure, affordable and easy to use end-to-end solution for managing school's day-to-day operations 
                      </div>
                   </div>
-                  <!-- Large UI -->
                   <div class="column image-shadow" data-aos="fade-left">
                      <img src="assets/images/startup/features/competitive-pricing.png" alt="">
                   </div>
                </div>
-               <!-- /UI block -->
             </div>
             <div class="content-wrapper">
-               <!-- UI block -->
                <div class="columns is-vcentered">
-                  <!-- Content -->
                   <div class="column image-shadow" data-aos="fade-right">
                      <img src="assets/images/startup/features/promote-institution.png" alt="">
                   </div>
                   <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
                      <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
                         24/7 Access to eLearning & Academic Records
                      </h2>
@@ -327,232 +233,344 @@
                         Provide access to students accounts & other academic records.
                      </div>
                   </div>
-                  <!-- Large UI -->
                </div>
-               <!-- /UI block -->
             </div>
          </div>
       </section>
       <!-- /Features section -->
 
       <!-- Benefits section -->
-      <section id="benefits" class="section is-small">
+      <section id="benefits" class="section is-medium">
          <div class="container">
-            <!-- Title -->
-            <div class="section-title-wrapper" data-aos="fade-in" data-aos-easing="linear">
-               <!--<div class="bg-number">2</div>-->
-               <h2 class="title section-title has-text-centered dark-text"> Benefits</h2>
-               <div class="subtitle has-text-centered is-tablet-padded">
-                  Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.                   
-               </div>
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/infrastructure-server-maintenance.png" alt="">
-                  </div>
-                  <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
-                        Zero IT Infrastructure and Server Maintenance Cost-01
-                     </h2>
-                     <div class="section-feature-description has-text-right"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
+         <div class="section-title-wrapper" data-aos="fade-in" data-aos-easing="linear">
+            <h2 class="title section-title has-text-centered dark-text"> Benefits</h2>
+         </div>
+         <div class="content-wrapper" data-aos="zoom-out">
+            <div class="columns is-vcentered">
+               <div class="column">
+                  <div class="multiple-image-carousel slider ">
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card1">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/infrastructure-server-maintenance.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">Zero IT Infrastructure and Server Maintenance Cost-01</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card2">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/zero-redundancy.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">Zero Redundancy in managing Institutuion's records</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card3">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/free-updates-v2.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">Free Updates, bug fixes and Impovement</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card4">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/communication-collaboration.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">Effective communication and collaboration between teachers, student and parents</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card5">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/email-chat-support.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">24/7 Email and Chat Support</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card6">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/multi-school-solution.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">Multi-School solution for your group of institutions</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item slick-slide" style="width: 237px;">
+                        <div class="card">
+                           <div class="card-image card-height modal-button" data-target="modal-card7">
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="hovereffect">
+                                    <img class="img-responsive card-img-padding" src="assets/images/startup/benefits/data-security.png" alt="">
+                                    <div class="overlay">
+                                       <h2>Click for more details</h2>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-content card-content-height">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <p class="title is-5 has-text-centered">24/7 Email and Chat Support</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
-                  <!-- Large UI -->
                </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column" data-aos="fade-right">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                        Zero Redundancy in managing Institutuion's records
-                     </h2>
-                     <div class="section-feature-description has-text-left"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/zero-redundancy.png" alt="">
-                  </div>
-               </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/free-updates.png " alt="">
-                  </div>
-                  <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
-                        Free Updates, bug fixes and Impovement
-                     </h2>
-                     <div class="section-feature-description has-text-right"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-               </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column" data-aos="fade-right">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                        Effective communication and collaboration between teachers, student and parents
-                     </h2>
-                     <div class="section-feature-description has-text-left"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/communication-collaboration.png" alt="">
-                  </div>
-               </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/email-chat-support.png" alt="">
-                  </div>
-                  <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
-                        24/7 Email and Chat Support
-                     </h2>
-                     <div class="section-feature-description has-text-right"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-               </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column" data-aos="fade-right">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                        Multi-School solution for your group of institutuions
-                     </h2>
-                     <div class="section-feature-description has-text-left"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/multi-school-solution.png" alt="">
-                  </div>
-               </div>
-               <!-- /UI block -->
-            </div>
-            <div class="content-wrapper">
-               <!-- UI block -->
-               <div class="columns is-vcentered">
-                  <!-- Content -->
-                  <div class="column float-image image-shadow" data-aos="zoom-in">
-                     <img src="assets/images/startup/benefits/data-security.png" alt="">
-                  </div>
-                  <div class="column" data-aos="fade-left">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
-                     <h2 class="title section-subtitle darker-text text-bold is-2 has-text-right">
-                        24/7 Email and Chat Support
-                     </h2>
-                     <div class="section-feature-description has-text-right"> 
-                        Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                     </div>
-                  </div>
-                  <!-- Large UI -->
-               </div>
-               <!-- /UI block -->
             </div>
          </div>
       </section>
+      <!-- Modals -->
+      <div id="modal-card1" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/infrastructure-server-maintenance.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">Zero IT Infrastructure and Server Maintenance Cost-01
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card2" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/zero-redundancy.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">Zero Redundancy in managing Institutuion's records
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card3" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/free-updates-v2.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">Free Updates, bug fixes and Impovement
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card4" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/communication-collaboration.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">Effective communication and collaboration between teachers, student and parents
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card5" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/email-chat-support.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">24/7 Email and Chat Support
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card6" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/multi-school-solution.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">Multi-School solution for your group of institutions
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div id="modal-card7" class="modal modal-fx-3dSlit">
+         <div class="modal-background"></div>
+         <div class="modal-content is-tiny">
+            <div class="card-in-modal">
+               <div class="card-in-modal-image-container">
+                  <img class="card-in-modal-image" src="assets/images/startup/benefits/data-security.png" alt="">
+               </div>
+               <svg class="card-in-modal-svg" viewBox="0 0 800 500">
+                  <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"/>
+                  <path class="card-in-modal-line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="orange" stroke-width="3" fill="transparent"/>
+               </svg>
+               <div class="card-in-modal-content">
+                  <p class="card-in-modal-title has-text-centered">24/7 Email and Chat Support
+                  </p>
+                  <p class="card-in-modal-subtitle has-text-centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde perspiciatis adipisci possimus quam facere illo et quisquam quia earum nesciunt porro.</p>
+               </div>
+            </div>
+         </div>
+         <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <!-- /Modals -->
       <!-- /Benefits section -->
 
       <!-- Ads Services -->
-      <!-- <section id="ads" class="section" style="background: linear-gradient(to right, #1378bc, #7cbfec);">
-         <div class="container">
-             <div class="content-wrapper">
-                 <div class="columns is-vcentered">
-                     <div class="column is-3 phone-image">
-                         <img src="assets/images/startup/phone.png" alt="" style="height: 280px">
-                     </div>
-                     <div class="column is-4">
-                         <div class="section-mobile-description has-text-left"> 
-                             Dedicated and branded Mobile App in your school's name and logo.
-                         </div>
-                     </div>
-                     <div class="columns is-6">
-                         <div class="button-wrap">
-                             <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta light-btn btn-outlined-mobile is-bold is-title-reveal"><i class="fa fa-apple" style="font-size:40px;"></i>Download on the <br/> App Store</a>
-                         </div>
-                         <div class="button-wrap">
-                             <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta light-btn btn-outlined-mobile is-bold is-title-reveal"><i class="fa fa-apple" style="font-size:40px;"></i>Available on the <br/> Google Play</a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         </section> -->
-      <!-- /Ads Services -->
-
-      <!-- Ads Services -->
-      <section id="ads" class="section parallax is-cover is-relative" data-background="https://via.placeholder.com/1920x1077" data-color="#000" data-color-opacity="0.7"
-         data-demo-background="assets/images/startup/features-header.png">
-         
+      <!-- <section id="ads" class="section parallax is-cover is-relative" data-background="https://via.placeholder.com/1920x1077" data-color="#000" data-color-opacity="0.7"
+         data-demo-background="assets/images/startup/features-header.png"> -->
+      <section id="ads" class="section" style="background: linear-gradient(to right, #1378bc, #7cbfec);">
          <div id="features-1" class="container">
-            <!-- Title -->
             <div class="content-wrapper">
-               <!-- UI block -->
                <div class="columns is-vcentered">
-                  <!-- <div class="column is-3 phone-image">
-                     <img src="assets/images/startup/phone.png" alt="" style="height: 280px">
-                     </div> -->
                   <div class="column is-3 phone-image">
                      <img class="mobile-logo-v2" src="assets/images/logos/logo-dark.png" alt="">
                      <img class="shadow-side-image" src="assets/images/startup/mobile2.png" alt="" style="height: 200px;width: auto;">
                      <img class="side-image is-tablet" src="assets/images/startup/mobile2.png" alt="" style="height: 260px;width: auto;">
                   </div>
                   <div class="column is-4">
-                     <!--<div class="icon-subtitle"><i class="im im-icon-Laptop-Phone"></i></div>-->
                      <div class="section-mobile-description has-text-left"> 
                         Dedicated and branded Mobile App in your school's name and logo.
                      </div>
-                     <!--<div class="pt-20 pb-20">
-                        <a href="#" class="button button-cta primary-btn rounded raised">See it in action</a>
-                        </div>-->
                   </div>
                   <div class="columns is-6" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                      <div class="button-wrap">
-                        <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta light-btn btn-outlined-mobile is-bold">
-                        <i class="fa fa-apple" style="font-size:40px;"></i>Download on the <br/> App Store
+                        <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta-v2 light-btn btn-outlined-mobile-v2 is-bold">
+                        <img src="assets/images/logos/app-store.png" alt="" style="width: 46px;padding-right: 0.7rem;">Download on the <br/> App Store
                         </a>
                      </div>
                      <div class="button-wrap">
-                        <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta light-btn btn-outlined-mobile is-bold"> 
-                        <img src="assets/images/logos/google-play-v2.png" alt="" style="width: 46px;padding-right: 0.7rem;">
-                        <img src="assets/images/logos/google-play.png" alt="" class="gp-black">Available on the <br/> Google Play
+                        <a href="#" data-toggle="modal" data-target="" id="download" class="button button-cta-v2 light-btn btn-outlined-mobile-v2 is-bold"> 
+                        <img src="assets/images/logos/google-play-v2.png" alt="" style="width: 46px;padding-right: 0.7rem;">Available on the <br/> Google Play
                         </a>
                      </div>
                   </div>
@@ -563,111 +581,26 @@
       <!-- /Ads Services -->
 
       <!-- How-it-works section -->
-      <!-- <section id="how-it-works" class="section is-small">
+      <section id="how-it-works" class="section is-medium">
          <div class="container">
-             <div class="section-title-wrapper">
-                 <h2 class="title section-title has-text-centered dark-text"> 3 steps to enroll using Padeian</h2>
-                 <div class="subtitle has-text-centered is-tablet-padded">
-                         Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.                   
-                 </div>
-             </div>
-         
-             <div class="content-wrapper">
-                 <div class="columns is-vcentered">
-                     <div class="column">
-                         <img src="assets/images/startup/how-it-works/admission.png" alt="">
-                     </div>
-                     <div class="column">
-                         <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                             1. Admission
-                         </h2>
-                         <div class="section-feature-description has-text-left"> 
-                             Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                         </div>
-                      
-                     </div>
-                 </div>
-             </div>
-             <div class="content-wrapper-v2">
-                 <div class="columns is-vcentered">
-                     <div class="column" style="text-align:center;">
-                         <img class="float-arrow" src="assets/images/startup/how-it-works/arrow.png" alt="">
-                     </div>
-                     <div class="column"></div>
-                 </div>
-             </div>
-             <div class="content-wrapper-v2">
-                 <div class="columns is-vcentered">
-                     <div class="column">
-                         <img src="assets/images/startup/how-it-works/assessment.png" alt="">
-                     </div>
-                     <div class="column">
-                         <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                             2. Assessment
-                         </h2>
-                         <div class="section-feature-description has-text-left"> 
-                             Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                         </div>
-                      
-                     </div>
-                 </div>
-             </div>
-             <div class="content-wrapper-v2">
-                 <div class="columns is-vcentered">
-                     <div class="column" style="text-align:center;">
-                         <img class="float-arrow" src="assets/images/startup/how-it-works/arrow.png" alt="">
-                     </div>
-                     <div class="column"></div>
-                 </div>
-             </div>
-             <div class="content-wrapper-v2">
-                 <div class="columns is-vcentered">
-                     <div class="column">
-                         <img src="assets/images/startup/how-it-works/payment.png" alt="">
-                     </div>
-                     <div class="column">
-                         <h2 class="title section-subtitle darker-text text-bold is-2 has-text-left">
-                             3. Payment
-                         </h2>
-                         <div class="section-feature-description has-text-left"> 
-                             Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam. 
-                         </div>
-                      
-                     </div>
-                 </div>
-             </div>
-         </div>
-         </section> -->
-      <!-- /How-it-works section -->
-
-      <!-- How-it-works section -->
-      <section id="how-it-works" class="section is-small">
-         <div class="container">
-            <!-- Title -->
             <div class="section-title-wrapper" style="padding-bottom:0" data-aos="fade-in" data-aos-easing="linear">
-               <!--<div class="bg-number">2</div>-->
                <h2 class="title section-title has-text-centered dark-text"> 3 steps to enroll using Padeian</h2>
-               <div class="subtitle has-text-centered is-tablet-padded">
-                  Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.                   
-               </div>
             </div>
             <div class="content-wrapper" style="padding-top:0">
-               <!-- UI block -->
                <div class="columns is-vcentered">
-                  <!-- Content -->
                   <div class="column" data-aos="fade-in" data-aos-easing="linear">
                      <div class="tab">
                         <a class="tablinks" onclick="howItWorks(event, 'Admission')" id="defaultOpen">
                            <h3>1. Admission <i class="fa fa-caret-right"></i></h3>
-                           <p>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.</p>
+                           <p>This module will facilitate student admission. It will be capable of sorting online and walk-in applicant's details and store admission. The Module will also enable automatic data transfer of successful applicant to Applicant Assessment Desk for fees assessment, mode of payments and other inclusions.</p>
                         </a>
                         <a class="tablinks" onclick="howItWorks(event, 'Assessment')">
                            <h3>2. Assessment <i class="fa fa-caret-right"></i></h3>
-                           <p>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.</p>
+                           <p>This module provides for the facilitation of the fees assessment and processing of inclusion in the applicant's rolls. <br/> <br/> <i>For Transferees/Irregular College students, The School Administrator may be able to evaluate, choose the applicable subjects for the applicant under his/her course level's curriculum.</i> </p>
                         </a>
                         <a class="tablinks" onclick="howItWorks(event, 'Payment')">
                            <h3>3. Payment <i class="fa fa-caret-right"></i></h3>
-                           <p>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent hendrerit eum, sed stet periculis ut. Vis in probo decore labitur. Unum simul an vis, tale patrioque eos ad, dicunt percipit ea nam.</p>
+                           <p>This module will support the management and monitoring of the Student's Payment Ledger. It will provide a full history of Liabilities(Tuition and Other Miscellaneous Fees Applicable), Fees Creation for non-Tuition Fees such as Extra-curricular Activities/Field trips etc.</p>
                         </a>
                      </div>
                   </div>
@@ -683,80 +616,11 @@
                      </div>
                   </div>
                </div>
-               <!-- /UI block -->
             </div>
          </div>
       </section>
       <!-- /How-it-works section -->
-
-      <!-- App showcase Section -->
-      <!-- <div class="section is-medium section-feature-grey has-background-image is-contain" >
-         <div class="container">
-             <div class="section-title-wrapper has-text-centered">
-                 <div class="special-divider">
-                     <span></span>
-                     <span></span>
-                 </div>
-                 <h2 class="title is-2">Awesome Features.</h2>
-                 <h4 class="subtitle is-4">Discover our App.</h4>
-             </div>
-             
-             <div class="content-wrapper">
-                 <div class="columns is-vcentered">
-                     <div class="column is-7">
-                         <div class="showcase-wrapper">
-                             <div id="mockup-1" class="showcase-wrap is-active">
-                                 <img class="app-showcase" src="assets/images/startup/how-it-works/admission.png" alt="">
-                             </div>
-                             <div id="mockup-2" class="showcase-wrap">
-                                 <img class="app-showcase" src="assets/images/startup/how-it-works/admission.png" alt="">
-                             </div>
-                             <div id="mockup-3" class="showcase-wrap">
-                                 <img class="app-showcase" src="assets/images/startup/how-it-works/admission.png" alt="">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="column is-5">
-                         <div id="feature-1" class="showcase-text-wrapper animated preFadeInUp fadeInUp">
-                             <h3 class="title is-3">Project Management</h3>
-                             <p>Project managment is really awesome because lorem ipsum sit dolor amet et cupidis et sil cout marat. Lorem ipsum sit dolor amet et cupidis et sil cout marat.</p>
-                             <a href="#" class="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
-                                 Learn more
-                             </a>
-                         </div>
-                         <div id="feature-2" class="showcase-text-wrapper animated preFadeInUp fadeInUp is-hidden">
-                             <h3 class="title is-3">Accounting</h3>
-                             <p>Accounting is really awesome because lorem ipsum sit dolor amet et cupidis et sil cout marat. Lorem ipsum sit dolor amet et cupidis et sil cout marat.</p>
-                             <a href="#" class="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
-                                 Learn more
-                             </a>
-                         </div>
-                         <div id="feature-3" class="showcase-text-wrapper animated preFadeInUp fadeInUp is-hidden">
-                             <h3 class="title is-3">Document Management</h3>
-                             <p>Document managment is really awesome because lorem ipsum sit dolor amet et cupidis et sil cout marat. Lorem ipsum sit dolor amet et cupidis et sil cout marat.</p>
-                             <a href="landing-v4-login.html" class="button button-cta is-bold btn-align primary-btn raised mt-20 mb-20">
-                                 Free Trial
-                             </a>
-                         </div>
-                     </div>
-                 </div>
-                 
-                 <div class="slide-control">
-                     <div class="slide-dot is-active" data-feature="mockup-1" data-feature-text="feature-1">
-                         <img src="assets/images/illustrations/icons/landing-v5/dot-1.svg" alt="">
-                     </div>
-                     <div class="slide-dot" data-feature="mockup-2" data-feature-text="feature-2">
-                         <img src="assets/images/illustrations/icons/landing-v5/dot-2.svg" alt="">
-                     </div>
-                     <div class="slide-dot" data-feature="mockup-3" data-feature-text="feature-3">
-                         <img src="assets/images/illustrations/icons/landing-v5/dot-3.svg" alt="">
-                     </div>
-                 </div>
-             </div>
-         </div>
-         </div> -->
-      <!-- /App showcase Section -->
-      
+   
       <!-- Dark footer -->
       <footer id="dark-footer" class="footer footer-dark">
          <div class="container has-text-centered">
@@ -789,34 +653,6 @@
                      </div>
                   </div>
                </div>
-               <!-- <div class="column">
-                  <div class="footer-column">
-                      <div class="footer-logo">
-                          <img src="assets/images/logos/logo-white.png" alt="">
-                      </div>
-                      <div class="footer-header">
-                          <nav class="level is-mobile">
-                              <div class="level-left level-social">
-                                  <a href="#" class="level-item">
-                                      <span class="icon"><i class="fa fa-facebook"></i></span>
-                                  </a>
-                                  <a href="#" class="level-item">
-                                      <span class="icon"><i class="fa fa-twitter"></i></span>
-                                  </a>
-                                  <a href="#" class="level-item">
-                                      <span class="icon"><i class="fa fa-linkedin"></i></span>
-                                  </a>
-                                  <a href="#" class="level-item">
-                                      <span class="icon"><i class="fa fa-dribbble"></i></span>
-                                  </a>
-                                  <a href="#" class="level-item">
-                                      <span class="icon"><i class="fa fa-github"></i></span>
-                                  </a>
-                              </div>
-                          </nav>
-                      </div>
-                  </div>
-                  </div> -->
             </div>
             <div class="footer-column">
                <div class="footer-header">
@@ -825,33 +661,41 @@
             </div>
          </div>
       </footer>
-      <!-- /Dark footer -->       
+      <!-- /Dark footer -->   
 
       <!-- Back To Top Button -->
       <div id="backtotop"><a href="#"></a></div>
+
       <!-- Concatenated jQuery and plugins -->
       <script src="assets/js/app.js"></script>
+
       <!-- Bulkit js -->
       <script src="assets/js/startup.js"></script>
       <script src="assets/js/auth.js"></script>
       <script src="assets/js/contact.js"></script>
       <script src="assets/js/main.js"></script>    
-      <!-- Bulkit js -->
+      <!-- /Bulkit js -->
+
       <script src="https://bulma.io/vendor/js.cookie-2.1.4.min.js"></script>
       <script src="https://bulma.io/lib/main.js?v=201909191709"></script>
       <script src="../../../cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+      <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
       <script>
          AOS.init({
            easing: "ease-out",
            duration: 800,
          });
-
+         
          $('#basicModal').on('shown.bs.modal', function (e) {
              alert('Modal is successfully shown!');
          });
-
+         
          function howItWorks(evt, tabId) {
            var i, tabcontent, tablinks;
            tabcontent = document.getElementsByClassName("tabcontent");
@@ -865,10 +709,28 @@
            document.getElementById(tabId).style.display = "block";
            evt.currentTarget.className += " active";
          }
-         
-         // Get the element with id="defaultOpen" and click on it
          document.getElementById("defaultOpen").click();
+
+         // dummy json data to save
+         var data = { x: 42, s: "hello, world", d: new Date() }
+
+         document.getElementById('myButton').onclick = function(event){
+
+            var json = JSON.stringify(data),
+            blob = new Blob([json], {type:"text/plain"}),
+            url = window.URL.createObjectURL(blob);
+         
+            this.href = url;
+            this.target = '_blank';
+            
+            // target filename
+            this.download = 'laptop.txt';
+         
+         
+         
+         }
+
       </script>
+
    </body>
-   <!-- Mirrored from bulkitv2.cssninja.io/startup/padeian-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2019 09:50:41 GMT -->
 </html>
